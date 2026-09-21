@@ -13,5 +13,7 @@ public class Main {
 
         System.out.println("Config 1 volume: " + config1.getVolume());
         System.out.println("Config 2 volume: " + config2.getVolume());
+
     }
+
 }

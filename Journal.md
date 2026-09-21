@@ -1,2 +1,2 @@
 # Journal
-Checking config1 == config2 shows that both variables point to the same ConfigurationManager object. The private constructor stops other classes from creating new ones, while getInstance() gives the program access to the one shared instance.
+Lazy loading waits until the ConfigurationManager is actually needed before creating it. This can be better if creating the object takes a lot of resources. The trade-off is that the first call takes slightly more work and lazy loading can also become more complicated in multithreaded programs.
