@@ -1,2 +1,2 @@
 # Journal
-Lazy loading waits until the ConfigurationManager is actually needed before creating it. This can be better if creating the object takes a lot of resources. The trade-off is that the first call takes slightly more work and lazy loading can also become more complicated in multithreaded programs.
+The subsystem classes can access the ConfigurationManager without having it passed into their constructors. That makes the constructors simple, but it also creates a hidden dependency because someone looking at the class may not immediately know it depends on ConfigurationManager. This can make unit testing harder because the class is tied to the global Singleton.

@@ -1,19 +1,19 @@
 public class Main {
     public static void main(String[] args) {
 
-        ConfigurationManager config1 =
-                ConfigurationManager.getInstance();
+        AudioSystem audio = new AudioSystem();
+        GraphicsRenderer graphics = new GraphicsRenderer();
 
-        ConfigurationManager config2 =
-                ConfigurationManager.getInstance();
+        audio.playSound();
+        graphics.render();
 
-        System.out.println(config1 == config2);
+        audio.setVolume(90);
 
-        config1.setVolume(80);
+        audio.playSound();
 
-        System.out.println("Config 1 volume: " + config1.getVolume());
-        System.out.println("Config 2 volume: " + config2.getVolume());
+        ConfigurationManager.getInstance()
+                .setResolution("2560x1440");
 
+        graphics.render();
     }
-
-}
+}4
